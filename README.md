@@ -1,37 +1,75 @@
+```markdown
 # Rename-bulk-files
-This project consists of renaming and deleting files in bulk.
 
+O Rename-bulk-files é um projeto Python desenvolvido para facilitar a renomeação e exclusão em massa de arquivos em um diretório especificado. Ele fornece funções simples e eficazes para realizar essas tarefas de maneira rápida e conveniente.
 
-# Renaming
+## Funcionalidades
 
-- Before:
+- Renomeação em massa de arquivos adicionando um prefixo ao nome original.
+- Exclusão em massa de arquivos.
+- Visualização das operações antes da execução.
+- Possibilidade de desfazer as últimas operações de renomeação e restaurar arquivos excluídos.
 
-  ![image](https://user-images.githubusercontent.com/60896979/173439283-5f0fd4f4-fdbe-4c38-ae6b-2ea56b2ddf13.png)
+## Como Executar
 
+Para executar o projeto, siga estas etapas:
 
-- During:
+1. Certifique-se de ter o Python instalado em seu sistema.
+2. Clone o repositório para o seu ambiente local:
+   ```bash
+   git clone https://github.com/seu-usuario/rename-bulk-files.git
+   ```
+3. Navegue até o diretório do projeto:
+   ```bash
+   cd rename-bulk-files
+   ```
+4. Execute o script principal `main.py`:
+   ```bash
+   python main.py
+   ```
 
-  ![image](https://user-images.githubusercontent.com/60896979/173439614-3ce5dd60-a485-4c6b-97e3-826b7f219243.png)
+## Uso
 
+O projeto fornece duas principais funções para operações em massa de arquivos:
 
-- After:
+### Renomear Arquivos
 
-  ![image](https://user-images.githubusercontent.com/60896979/173439737-5f3bb803-3577-40ab-9743-c0824fda6016.png)
+```python
+from renamer.operations import rename_files
 
+# Renomeia os arquivos no diretório especificado adicionando o prefixo 'novo_'
+rename_files(path="./caminho_para_os_arquivos", prefix="novo_", preview=False)
+```
 
+### Excluir Arquivos
 
-# Deleting
+```python
+from renamer.operations import delete_files
 
-- Before:
+# Exclui os arquivos no diretório especificado
+delete_files(path="./caminho_para_os_arquivos", preview=False)
+```
 
-  ![image](https://user-images.githubusercontent.com/60896979/173440282-276c6994-2769-4e55-99bf-07b6e55a2d95.png)
+É possível visualizar as alterações antes de executar as operações, passando o parâmetro `preview=True`.
 
+## Desfazer Operações
 
-- During:
+Para desfazer a última operação de renomeação ou restaurar arquivos excluídos, utilize as funções `undo_last_rename()` e `restore_files()` respectivamente, conforme necessário.
 
-  ![image](https://user-images.githubusercontent.com/60896979/173440629-0556c47e-f2e2-4f06-baf1-9775c986a2d0.png)
+```python
+from renamer.utils import undo_last_rename, restore_files
 
+# Desfaz a última operação de renomeação
+undo_last_rename()
 
-- After:
+# Restaura arquivos previamente excluídos
+restore_files()
+```
 
-  ![image](https://user-images.githubusercontent.com/60896979/173440869-1a12f18a-c02c-4f0a-9f3e-1daf6d1437b9.png)
+## Possíveis Implementações Futuras
+
+Algumas melhorias e recursos adicionais que podem ser implementados no projeto incluem:
+
+- Suporte para renomear arquivos com base em padrões de expressões regulares.
+- Adição de funcionalidade para mover arquivos para diferentes diretórios.
+- Implementação de uma interface gráfica do usuário (GUI) para uma experiência mais intuitiva.
