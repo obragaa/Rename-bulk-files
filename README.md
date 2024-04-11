@@ -1,4 +1,3 @@
-```markdown
 # Rename-bulk-files
 
 O Rename-bulk-files é um projeto Python desenvolvido para facilitar a renomeação e exclusão em massa de arquivos em um diretório especificado. Ele fornece funções simples e eficazes para realizar essas tarefas de maneira rápida e conveniente.
