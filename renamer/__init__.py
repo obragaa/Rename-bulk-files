@@ -1,0 +1,1 @@
+# Deixe este arquivo vazio; sua existência indica que renamer é um pacote Python.

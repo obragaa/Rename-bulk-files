@@ -1,0 +1,6 @@
+Renamed ./path_example_files/img2.jpg to ./path_example_files/novo_img2.jpg
+Renamed ./path_example_files/img3.jpg to ./path_example_files/novo_img3.jpg
+Renamed ./path_example_files/img1.jpg to ./path_example_files/novo_img1.jpg
+Deleted ./path_example_files/img2.jpg
+Deleted ./path_example_files/img3.jpg
+Deleted ./path_example_files/img1.jpg
